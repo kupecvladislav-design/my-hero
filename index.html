@@ -16,14 +16,31 @@
     <main>
         <section>
             <h2>Мій герой</h2>
-            <p>Рівень 1 · Досвід 0 / 100</p>
+            <p id="hero-progress">Рівень 1 · Досвід 0 / 100</p>
         </section>
 
         <section>
             <h2>Напрямки розвитку</h2>
             <button type="button">Сила</button>
-            <button type="button">Інтелект</button>
+            <button type="button"
+                    id="intellect-button"
+                    aria-expanded="false"
+                    aria-controls="intellect-panel">Інтелект</button>
             <button type="button">Майстерність</button>
+        <section id="intellect-panel" hidden>
+                <h2>Інтелект · Англійська</h2>
+                <p id="english-progress">Рівень навички 1 · Досвід 0 / 100</p>
+                <progress id="english-progress-bar" value="0" max="100">
+                 0 зі 100
+                </progress>
+                <h3>Перший квест</h3>
+                <p>Розібрати 5 англійських фраз із улюбленої гри.</p>
+                <p>Нагорода · 25 досвіду</p>
+
+            <button type="button" id="complete-quest-button">
+                 Квест виконано
+            </button>
+            <p id="quest-status" role="status"></p>
         </section>
     </main>
 </body>
